@@ -7,4 +7,5 @@ urlpatterns = [
     path('show/', views.show),
     path('template/', views.template),
     path('form/', views.form),
+    path('validate/', views.emp),
 ]
