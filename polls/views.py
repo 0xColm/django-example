@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.http import require_http_methods
 from django.template import loader
+from polls.form import EmpForm
 
 def index(request):
     now = datetime.datetime.now()
@@ -15,3 +16,7 @@ def show(request):
 
 def template(request):
     return render(request, 'index.html')
+
+def form(request):
+    stu = EmpForm()
+    return render(request, "form.html", {'form':stu})
