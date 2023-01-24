@@ -14,8 +14,4 @@ def show(request):
     return HttpResponse("<h1>This is Http GET request.</h1>")
 
 def template(request):
-    template = loader.get_template('index.html')
-    name = {
-        'student':'rahul'
-    }
-    return HttpResponse(template.render(name))
+    return render(request, 'index.html')
